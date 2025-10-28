@@ -175,11 +175,54 @@
 // console.log(opq(1,5));
 
 
-let arr = [1,2,3,4,5];
-console.log(arr)
-console.log(...arr);
+// let arr = [1,2,3,4,5];
+// console.log(arr)
+// console.log(...arr);
 
-let aArr =  "js"
-console.log(aArr);
-console.log(...aArr);
+// let aArr =  "js"
+// console.log(aArr);
+// console.log(...aArr);
+
+
+
+
+
+
+
+
+const users = [
+{ firstName: "akshay", lastName: "saini", age: 26 },
+{ firstName: "donald", lastName: "trump", age: 75 },
+{ firstName: "elon", lastName: "musk", age: 50 },
+{firstName: "deepika", lastName: "padukone", age: 26 },
+];
+
+// list of full names
+// ["akshay saini", "donald trump" ... ]
+
+// const output = users.map(x => x.firstName +" " + x.lastName)
+// console.log(output);
+
+// const age = users.reduce((x,b) =>{ x[b.age] = x[b.age]? x[b.age] + 1 : 1
+//     return x;
+// }, {});
+// const age = users.reduce(function (x,b){
+//     if(x[b.age]){
+//         x[b.age] = ++x[b.age]
+//     }
+//     else{
+//         x[b.age] = 1
+//     }
+//     return x;
+// }, {});
+// console.log(age);
+
+// const fname = users.filter(a => a.age < 30 ).map(x => x.firstName);
+
+const fname = users.reduce((a,b) =>{
+    if(b.age<30){
+        a.push(b.firstName)
+    }
+return a },[])
+console.log(fname);
 
