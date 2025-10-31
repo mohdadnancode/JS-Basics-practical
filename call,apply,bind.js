@@ -1,13 +1,13 @@
-// Call
+// // Call
 
-function greet(city) {
-  console.log(`Hello, my name is ${this.name} from ${city}`);
-}
+// function greet(city) {
+//   console.log(`Hello, my name is ${this.name} from ${city}`);
+// }
 
-const person1 = { name: "Adnan" };
+// const person1 = { name: "Adnan" };
 
-greet.call(person1, "Kozhikode");
-// Output: Hello, my name is Adnan from Kozhikode
+// greet.call(person1, "Kozhikode");
+// // Output: Hello, my name is Adnan from Kozhikode
 
 
 
@@ -33,3 +33,20 @@ greet.call(person1, "Kozhikode");
 
 // const sayHello = greet.bind(person2);
 // sayHello(); // Output: Hey, Adnan
+
+
+
+const student1 = {
+  name : "Adnan",
+  print  : function(){
+    console.log(`Hi Im ${this.name}`);
+  }
+}
+
+student1.print();
+
+const student2 = {
+  name :  "Mohammed"
+};
+
+student1.print.call(student2)
