@@ -20,6 +20,7 @@ const obj1 = {
 const obj2 = {
     name : "Adnan",
     x : function(){
+        // Enclosing lexical contest
         let y = () => {
         console.log(this)
     }
